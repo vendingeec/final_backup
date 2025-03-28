@@ -1,0 +1,90 @@
+Mar 28 12:40:58 vendingmachine systemd[1]: Starting vending_startup.service - Run Script...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit vending_startup.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit vending_startup.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 124.[0m
+Mar 28 12:41:10 vendingmachine systemd[1]: [0;1;39m[0;1;31m[0;1;39mvending_startup.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit vending_startup.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 28 12:41:10 vendingmachine systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mvending_startup.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit vending_startup.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 28 12:41:10 vendingmachine systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start vending_startup.service - Run Script.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit vending_startup.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit vending_startup.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 124 and the job result is failed.[0m
+Mar 28 21:59:27 vendingmachine systemd[1]: Starting vending_startup.service - Run Script...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit vending_startup.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit vending_startup.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2846.[0m
+Mar 28 21:59:37 vendingmachine systemd[1]: [0;1;39m[0;1;31m[0;1;39mvending_startup.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit vending_startup.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 28 21:59:37 vendingmachine systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mvending_startup.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit vending_startup.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 28 21:59:37 vendingmachine systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start vending_startup.service - Run Script.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit vending_startup.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit vending_startup.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2846 and the job result is failed.[0m
+Mar 28 22:00:33 vendingmachine systemd[1]: Starting vending_startup.service - Run Script...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit vending_startup.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit vending_startup.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2923.[0m
+Mar 28 22:00:43 vendingmachine systemd[1]: [0;1;39m[0;1;31m[0;1;39mvending_startup.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit vending_startup.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 28 22:00:43 vendingmachine systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mvending_startup.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit vending_startup.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 28 22:00:43 vendingmachine systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start vending_startup.service - Run Script.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit vending_startup.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: https://www.debian.org/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit vending_startup.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2923 and the job result is failed.[0m
