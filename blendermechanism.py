@@ -74,18 +74,32 @@ def blending_process(quantity):
     control_gear_motor(BLENDER_OFF)  # Turn off gear motor
     time.sleep(0.5)
 
-# Function to return blender to home position
+# Declare the global variable at the top of your script
+order_count = 0
+
 def move_to_home_position():
+    global order_count  # Tell Python to use the global variable
+    order_count += 1  # Increment after each operation
+
     ser = serial.Serial('/dev/serial0', baudrate=115200, timeout=1)
-    print("Moving stepper motor up.")
-    move_stepper(1700, GPIO.LOW)  # Move up (reverse)
+
+    # Use 1900 steps for every 5th order, otherwise 1700
+    if order_count % 5 == 0:
+        steps = 1900
+        print(f"Order {order_count}: Moving stepper motor up by 1900 steps (maintenance step).")
+    else:
+        steps = 1700
+        print(f"Order {order_count}: Moving stepper motor up by 1700 steps.")
+
+    move_stepper(steps, GPIO.LOW)
     time.sleep(0.5)
 
     print("Moving servo to Home Position.")
-    move_servo_right(ser)  # Move servo to home position
+    move_servo_right(ser)
     time.sleep(0.5)
 
     print("Program completed successfully.")
+
 
 # Function to simulate washing operation
 def washing_operation():
