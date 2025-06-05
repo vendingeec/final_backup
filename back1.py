@@ -174,6 +174,11 @@ order_count = load_order_count()
 
 def process_order(cup_type, flavor, water_quantity):
     global order_count
+    if cup_type not in ["machine", "user"] or not isinstance(water_quantity, int) or water_quantity not in [200, 400] or  not isinstance(flavor, int) or not 1 <= flavor <= 9:
+        print("Invalid order: cup_type, water_quantity, or flavor is incorrect.")
+        update_order_message("Invalid order received. Please check inputs.")
+        return
+
 
     try:
 
