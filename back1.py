@@ -267,6 +267,11 @@ def process_order(cup_type, flavor, water_quantity):
         order_count += 1  
         save_order_count(order_count)  
         print(f"Order {order_count} completed.")
+        
+        update_order_message("order completed")
+        time.sleep(1)  # Optional: Small delay for user acknowledgment
+        update_order_message("")
+
 
         if order_count % MAX_ORDERS_BEFORE_WATER_CHANGE == 0:
             print(f"{MAX_ORDERS_BEFORE_WATER_CHANGE} orders completed. Changing washing water...")
@@ -335,16 +340,21 @@ def ensure_cup_taken():
 
 status_message = ""
 
+
 def update_status_message(message):
     global status_message
     status_message = message
 
 @app.route('/order_status', methods=['GET'])
 def order_status():
-    global status_message
-    return jsonify({"status": status_message}), 200
-
-
+    global order_message
+    return jsonify({"status": order_message}), 200
+    
+def update_order_message(message):
+    """Updates the order status message for the frontend."""
+    global order_message
+    order_message = message
+    print(f"Order status updated: {message}")
 
 
 if __name__ == '__main__':
