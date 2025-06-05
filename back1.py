@@ -306,60 +306,50 @@ def payment_order():
     else:
         return jsonify({"success": False, "message": "Payment failed. Order cannot be processed."}), 400
 
-current_status = ""
-
+# ------------------------------------------------------------------------------------------
 sensor_status = ""
+order_status = ""
 
 def update_sensor_status(message):
-    """Updates the sensor status for the frontend."""
     global sensor_status
     sensor_status = message
-    print(f"Sensor status updated: {message}")  # Optional: Log updates
+    print(f"[Sensor Status] {message}")
+
+def update_order_status(message):
+    global order_status
+    order_status = message
+    print(f"[Order Status] {message}")
 
 @app.route('/sensor_status', methods=['GET'])
 def get_sensor_status():
-    """Endpoint for the frontend to fetch sensor status."""
-    global sensor_status
+    print(f"[GET] /sensor_status -> {sensor_status}")
     return jsonify({"sensor_status": sensor_status}), 200
 
+@app.route('/order_status', methods=['GET'])
+def get_order_status():
+    print(f"[GET] /order_status -> {order_status}")
+    return jsonify({"order_status": order_status}), 200
 
 def check_user_cup_option():
-    update_status_message("Awaiting Cup Placement")
+    update_sensor_status("Awaiting Cup Placement")
     while True:
         if GPIO.input(SENSOR_PIN) == 1:  # Cup detected
-            update_status_message("Cup Detected")
+            update_sensor_status("Cup Detected")
             time.sleep(1)  # Optional: Small delay for user acknowledgment
-            update_status_message("")  # Clear the status message
+            update_sensor_status("")  # Clear the status message
             return True
         time.sleep(0.2)
 
 def ensure_cup_taken():
-    update_status_message("Ready for Pickup")
+    update_sensor_status("Ready for Pickup")
     while True:
         if GPIO.input(SENSOR_PIN) == 0:  # Cup removed
-            update_status_message("Cup Retrieved")
+            update_sensor_status("Cup Retrieved")
             time.sleep(1)  # Optional: Small delay for user acknowledgment
             update_status_message("")  # Clear the status message
             return True
         time.sleep(0.2)
 
-status_message = ""
-
-
-def update_status_message(message):
-    global status_message
-    status_message = message
-
-@app.route('/order_status', methods=['GET'])
-def order_status():
-    global order_message
-    return jsonify({"status": order_message}), 200
-    
-def update_order_message(message):
-    """Updates the order status message for the frontend."""
-    global order_message
-    order_message = message
-    print(f"Order status updated: {message}")
 
 
 if __name__ == '__main__':
